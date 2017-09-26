@@ -1,6 +1,16 @@
 class BooksController < ApplicationController
 
+
 	def index
-		@books = books_url
+		@books = Book.all
+		respond_to do |format|
+			format.html
+
+			end
+
+		
 	end
+
+
+
 end
